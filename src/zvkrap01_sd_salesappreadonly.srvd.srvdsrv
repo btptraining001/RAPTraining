@@ -1,0 +1,7 @@
+@EndUserText.label: 'Service Devination : Sales App Real Only'
+define service ZVKRAP01_SD_SalesAppReadOnly {
+  expose ZVKRAP01_I_SO;
+  expose ZVKRAP01_I_SOIT;
+  expose ZVKRAP01_I_CUST;
+  expose ZVKRAP01_I_PROD;
+}

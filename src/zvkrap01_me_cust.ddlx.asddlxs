@@ -1,0 +1,21 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZVKRAP01_I_CUST with
+{
+
+  @UI.identification: [{ position: 10, label: 'Buyer No' }]
+  CustId;
+  @UI.identification: [{ position: 20, label: 'Buyer Name' }]
+  Name;
+  @UI.identification: [{ position: 30, label: 'Buyer Company' }]
+  CompanyName;
+  @UI.identification: [{ position: 40, label: 'Buyer Country' }]
+  Country;
+  @UI.identification: [{ position: 50, label: 'Buyer City' }]
+  City;
+  @UI.identification: [{ position: 60, label: 'Buyer Mobile' }]
+  Mobile;
+
+
+
+
+}

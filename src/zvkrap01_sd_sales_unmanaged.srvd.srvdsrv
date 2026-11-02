@@ -1,0 +1,7 @@
+@EndUserText.label: 'Service Devination : Sales App Transactional Unmanaged'
+define service ZVKRAP01_SD_Sales_Unmanaged {
+  expose ZVKRAP01_RC_SO_U;
+  expose ZVKRAP01_CC_SOIT_U;
+  expose ZVKRAP01_I_PROD;
+  expose ZVKRAP01_I_CUST;
+}

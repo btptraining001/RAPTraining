@@ -1,0 +1,57 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZVKRAP01_I_SOIT with
+{
+
+
+@UI.facet: 
+    [{        
+          id: 'SalesOrdItem',
+          purpose: #STANDARD,
+          position: 10,
+          label: 'Facet: Item Details',
+          type: #IDENTIFICATION_REFERENCE
+     }]
+     
+     
+  @UI.lineItem: [{ position: 10, label: 'OrderNo' }]
+  @UI.identification: [{ position: 10, label: 'OrderNo' }]  
+  Soid;
+
+  @UI.lineItem: [{ position: 20, label: 'Item No' }]
+  @UI.identification: [{ position: 20, label: 'Item No' }]  
+  ItemId;
+
+  @UI.lineItem: [{ position: 30, label: 'Product ID' }]
+  @UI.identification: [{ position: 30, label: 'Product ID' }]  
+ 
+  Product;
+
+  @UI.lineItem: [{ position: 40, label: 'Product Price' }]
+  @UI.identification: [{ position: 40, label: 'Product Price' }]
+  Amount;
+
+  @UI.lineItem: [{ position: 50, label: 'Currency' }]
+  @UI.identification: [{ position: 50, label: 'Currency' }]
+  Currency;
+
+  @UI.lineItem: [{ position: 60, label: 'Sales Agent' }]
+  @UI.identification: [{ position: 60, label: 'Sales Agent' }]
+  SalesPerson;
+
+  @UI.lineItem: [{ position: 70, label: 'Sales Timestamp' }]
+  @UI.identification: [{ position: 70, label: 'Sales Timestamp' }]
+  SalesTimestamp;
+
+  @UI.lineItem: [{ position: 80, label: 'Manager' }]
+  @UI.identification: [{ position: 80, label: 'Manager' }]
+  SalesManager;
+
+  @UI.lineItem: [{ position: 90, label: 'Approval Timestamp' }]
+  @UI.identification: [{ position: 90, label: 'Approval Timestamp' }]
+  ApprovalTimestamp;
+
+
+
+
+
+}

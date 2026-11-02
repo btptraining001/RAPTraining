@@ -1,0 +1,117 @@
+
+@Metadata.layer: #CUSTOMER
+
+@UI.headerInfo: {
+    typeName: 'SalesOrder',
+    typeNamePlural: 'SalesOrders',
+
+    title: {
+        type: #STANDARD,
+        label: 'Sales Order List',
+        value: 'Soid'
+
+    },
+
+
+    description: {
+        type: #STANDARD,
+        label: 'Order Details',
+        value: 'buyer'
+
+    }
+}
+annotate entity ZVKRAP01_RC_SO
+with 
+{ 
+@UI.facet: [
+  {
+      id: 'SalesOrd',
+      purpose: #STANDARD,
+      position: 10,
+      label: 'Facet: Order Details',
+      type: #IDENTIFICATION_REFERENCE
+  },
+  
+  {
+      id: 'Customer',
+      purpose: #STANDARD,
+      position: 20,
+      label: 'Facet: Customer Details',
+      type: #IDENTIFICATION_REFERENCE,
+      targetElement: '_Cust'
+  },
+  
+  
+  {
+      id: 'Item',  
+      purpose: #STANDARD,
+      position: 30,
+      label: 'Facet: Item Details',      
+      type: #LINEITEM_REFERENCE,
+      targetElement: '_Item'    
+  }       
+  
+  ]
+
+
+  @UI.lineItem: [{ position: 10, label: 'OrderNo' }]
+  @UI.identification: [{ position: 10, label: 'OrderNo' }]
+  @UI.selectionField: [{ position: 30 }]
+  @EndUserText.label: 'Sales Order ID'
+  Soid;
+
+  @UI.lineItem: [{ position: 20, label: 'Buyer' }]
+  @UI.identification: [{ position: 20, label: 'Buyer' }]
+  @UI.selectionField: [{ position: 10}]
+  @EndUserText.label: 'Buyer'
+  @Consumption.valueHelpDefinition: [{ entity: {
+                                           name: 'ZVKRAP01_I_CUST',
+                                           element: 'CustId'
+                                       } }]
+  Buyer;
+
+  @UI.lineItem: [{ position: 30, label: 'Sales Agent' }]
+  @UI.identification: [{ position: 30, label: 'Sales Agent' }]
+  @UI.selectionField: [{ position: 20 }]
+  @EndUserText.label: 'Sales Agent'
+  SalesPerson;
+
+  @UI.lineItem: [{ position: 40, label: 'Sales Timestamp' }]
+  @UI.identification: [{ position: 40, label: 'Sales Timestamp' }]
+  SalesTimestamp;
+  
+  @UI.lineItem: [
+                    { position: 50, label: 'Approval Manager' },
+                    { type : #FOR_ACTION, dataAction: 'updateaction', label: 'Approve' }
+                ]
+  @UI.identification: [
+                        { position: 50, label: 'Approval Manager' },
+                        { type : #FOR_ACTION, dataAction: 'updateaction', label: 'Approve' }                        
+                        
+                      ]
+  SalesManager;
+  
+  @UI.lineItem: [{ position: 60, label: 'Approval Timestamp' }]
+  @UI.identification: [{ position: 60, label: 'Approval Timestamp' }]
+  ApprovalTimestamp;
+  
+  @UI.lineItem: [{ position: 70, label: 'System Creation User' }]
+  @UI.identification: [{ position: 70, label: 'System Creation User' }]
+  CreatedBy;
+
+  @UI.lineItem: [{ position: 80, label: 'System Creation Time' }]
+  @UI.identification: [{ position: 80, label: 'System Creation Time' }]
+  CreatedOn;
+  
+  @UI.lineItem: [{ position: 90, label: 'System Change User' }]
+  @UI.identification: [{ position: 90, label: 'System Change User' }]
+  ChangedBy;
+  
+  @UI.lineItem: [{ position: 100, label: 'System Change Time' }]
+  @UI.identification: [{ position: 100, label: 'System Change Time' }]
+  ChangedOn;
+
+
+
+
+}
